@@ -16,16 +16,22 @@ class Venue
    end
 
    def yell_at_patrons
-     patrons.each do |patron|
-      yells_at_patrons = patron.upcase
-         end
-     return yells_at_patrons
-end
+     #starting an array
+     #need to return a new array with capitalized names
+     patron_caps = []
+     @patrons.each do |patron|
+       patron_caps << patron.upcase
+      #yell_at_patrons = patron.upcase
+      #or
+      #@patrons.map dp |patron|
+      #patron.upcase
+    end
+    patron_caps
+   end
+ end
 
     def over_capacity?
     if patrons.length >= 4
 
    end
-
-  end
- end
+end
