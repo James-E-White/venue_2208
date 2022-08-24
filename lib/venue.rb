@@ -17,14 +17,15 @@ class Venue
 
    def yell_at_patrons
      patrons.each do |patron|
-       @yell_at_patrons << patrons.case
-     end
-
+      yells_at_patrons = patron.upcase
+         end
+     return yells_at_patrons
+end
 
     def over_capacity?
     if patrons.length >= 4
 
    end
+
   end
  end
-end
