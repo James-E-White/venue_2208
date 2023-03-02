@@ -1,40 +1,37 @@
 class Venue
-  attr_reader :name,
-              :capacity,
-              :patrons,
-              :yell_at_patrons
+      attr_reader :name,
+                  :capacity,
+                  :patrons
 
   def initialize(name, capacity)
     @name = name
     @capacity = capacity
     @patrons = []
-    @yell_at_patrons = []
   end
 
-   def add_patron(patron)
-     @patrons << patron
-   end
+  def add_patron(patron)
+    @patrons << patron
+  end
 
-   def yell_at_patrons
-     #starting an array
-     #need to return a new array with capitalized names
-     patron_caps = []
-     @patrons.each do |patron|
-       patron_caps << patron.upcase
-      #yell_at_patrons = patron.upcase
-      #or
-      #@patrons.map dp |patron|
-      #patron.upcase
-    end
-    patron_caps
-   end
+  def yell_at_patrons
+   upcase_patron = []
+   @patrons.each do |patron|
+   upcase_patron << patron.upcase
+  end
+  upcase_patron
  end
 
-    def over_capacity?
-    if @patrons.length <= @capacity 
+ def over_capacity?
+    if @patrons.length <= capacity
       false
     else
-      true
+        true
     end
+ end
 
-  end
+ def kick_out
+    while over_capacity? == true
+        patrons.pop
+    end
+ end
+end
