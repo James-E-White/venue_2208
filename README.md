@@ -6,8 +6,8 @@
 * Clone your forked repo
 * Complete the activity Below
 * Push your solution to your repo
-* Submit a Pull Request from your repo to this repo
-* Put your name in your PR!
+* This was used to test skills in Mod 1 at Turing School of Software and Desing
+* First six weeks of learning Ruby
 
 # Iteration 1
 
